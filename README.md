@@ -39,7 +39,7 @@ The best way to install this kind of mod is by using [MultiMC](https://multimc.o
 **Note: If you wish to also play with Legacy Fabric mods, make a brand new instance and install ALL desired mods before launching the instance for the first time.**
 
 ## Creating the Overhead Map Image
-This is done with [uNmINeD](https://unmined.net/downloads/)
+This is done with [uNmINeD](https://unmined.net/downloads/):
 - Open the game save's level.dat file
 - (Optional) If the map has underground areas you wish to have visible, use the slicer toolbar and the X-Ray feature.
 - Save your desired selection of the map as an image
@@ -50,8 +50,7 @@ This is done with [uNmINeD](https://unmined.net/downloads/)
 - Name the image `overworld.png` or `nether.png` depending on which dimension it is
 
 ## Creating the Map Display
-
-This is where the Python script `MegamapMaker.py` comes into play. I have preloaded it with an example run I did of a trick on Legendary, but below is a list of instructions to make your own display.
+This is where the Python script `MegamapMaker.py` comes into play. I have preloaded it with an example run I did of a trick on Legendary, but below is a complete list of instructions to make your own display.
 
 After getting your run:
 
@@ -68,3 +67,18 @@ After getting your run:
 
 Your minimaps will now be in the `videos` folder, and you can edit them over your run.
 
+## Limitations and Possible Improvements
+First, the mod is only for 1.7.10. I will probably port it to 1.8 sometime in the future, but I do not have plans to port it to other versions. Feel free to contact me if you would like this mod ported to a different version, and I'll try my best to do so.
+
+Since the mod was made with Mod Coder Pack, I won't be able to port it to versions above 1.12.2. I would have to rewrite it to use Fabric, which is not something I know how to do yet.
+
+If you're more experienced with modding and would like to port or change the mod yourself, I have provided the custom class `MegamapTracker.java` (I cannot provide _all_ the source code because some of it is Mojang's code, but this custom class is the bulk of it). Basically, you want to call the `fillUpBuffer` method every tick and call the `flushToDisk` method whenever the game is saved.
+
+This system also doesn't show the locations of any non-player entities (most notably ender pearls). This is also a functionality I may implement in the future, though it would require drastic changes to both the mod and Python script.
+
+Similarly, the map display is not dynamic. This means any blocks you place or break during gameplay will not show up. I do not plan to implement this, as it would take a radically different approach and reduce the customizability of using a map image.
+
+Lastly, the implementation is not very efficient. That's why it's called "MegamapMaker" and not "MinimapMaker".
+
+## Credits
+Thanks to [jr5000](https://www.youtube.com/@jr5000pwp) for helping me learn how to use Mod Coder Pack and for suggesting that I use a custom class to make the mod. Also, thanks to [RedPenGuin111](https://www.youtube.com/@redpenguin111), whose Mapwreck 5 speedrun inspired me to make this.
