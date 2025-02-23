@@ -1,0 +1,30 @@
+{
+  "mappings": {
+    "net/fabricmc/megamaptracker/mixin/MinecraftMixin": {
+      "<init>": "Lnet/minecraft/class_1600;<init>(Lnet/minecraft/class_2332;)V",
+      "tick": "Lnet/minecraft/class_1600;method_2954()V"
+    },
+    "net/fabricmc/megamaptracker/mixin/PlayerMixin": {
+      "<init>": "Lnet/minecraft/class_798;<init>(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/class_795;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/class_799;)V",
+      "tick": "Lnet/minecraft/class_798;method_2558()V"
+    },
+    "net/fabricmc/megamaptracker/mixin/SaveHandlerMixin": {
+      "savePlayerData": "Lnet/minecraft/class_98;method_264(Lnet/minecraft/class_988;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/fabricmc/megamaptracker/mixin/MinecraftMixin": {
+        "<init>": "Lnet/minecraft/class_1600;<init>(Lnet/minecraft/class_2332;)V",
+        "tick": "Lnet/minecraft/class_1600;method_2954()V"
+      },
+      "net/fabricmc/megamaptracker/mixin/PlayerMixin": {
+        "<init>": "Lnet/minecraft/class_798;<init>(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/class_795;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/class_799;)V",
+        "tick": "Lnet/minecraft/class_798;method_2558()V"
+      },
+      "net/fabricmc/megamaptracker/mixin/SaveHandlerMixin": {
+        "savePlayerData": "Lnet/minecraft/class_98;method_264(Lnet/minecraft/class_988;)V"
+      }
+    }
+  }
+}
