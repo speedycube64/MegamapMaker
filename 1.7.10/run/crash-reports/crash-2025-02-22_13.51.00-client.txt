@@ -1,0 +1,134 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 2/22/25, 1:51 PM
+Description: Ticking entity
+
+java.lang.ArrayIndexOutOfBoundsException: Index 101 out of bounds for length 101
+	at net.fabricmc.megamaptracker.MegamapTracker.fillUpBuffer(MegamapTracker.java:46)
+	at net.minecraft.entity.player.PlayerEntity.handler$zzi000$megamaptracker$fillBuffer(PlayerEntity.java:2470)
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:340)
+	at net.minecraft.entity.player.ClientPlayerEntity.tick(ClientPlayerEntity.java:105)
+	at net.minecraft.world.World.checkChunk(World.java:1408)
+	at net.minecraft.world.World.checkChunk(World.java:1386)
+	at net.minecraft.world.World.tickEntities(World.java:1279)
+	at net.minecraft.client.MinecraftClient.tick(MinecraftClient.java:1850)
+	at net.minecraft.client.MinecraftClient.runGameLoop(MinecraftClient.java:889)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:325)
+	at net.minecraft.client.main.Main.main(Main.java:124)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.fabricmc.megamaptracker.MegamapTracker.fillUpBuffer(MegamapTracker.java:46)
+	at net.minecraft.entity.player.PlayerEntity.handler$zzi000$megamaptracker$fillBuffer(PlayerEntity.java:2470)
+	at net.minecraft.entity.player.PlayerEntity.tick(PlayerEntity.java:340)
+	at net.minecraft.entity.player.ClientPlayerEntity.tick(ClientPlayerEntity.java:105)
+	at net.minecraft.world.World.checkChunk(World.java:1408)
+	at net.minecraft.world.World.checkChunk(World.java:1386)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (net.minecraft.entity.player.ClientPlayerEntity)
+	Entity ID: 330
+	Entity Name: Player474
+	Entity's Exact location: 262.75, 80.00, 121.70
+	Entity's Block location: 262.00,80.00,121.00 - World: (262,80,121), Chunk: (at 6,5,9 in 16,7; contains blocks 256,0,112 to 271,255,127), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: -0.04, -0.08, 0.00
+	Entity's Rider: ~~ERROR~~ NullPointerException: Cannot invoke "net.minecraft.entity.Entity.toString()" because "this.field_11905.rider" is null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: Cannot invoke "net.minecraft.entity.Entity.toString()" because "this.field_11906.vehicle" is null
+Stacktrace:
+	at net.minecraft.world.World.tickEntities(World.java:1279)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [ClientPlayerEntity['Player474'/330, l='MpServer', x=262.75, y=80.00, z=121.70]]
+	Chunk stats: MultiplayerChunkCache: 587, 587
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 228.00,64.00,160.00 - World: (228,64,160), Chunk: (at 4,4,0 in 14,10; contains blocks 224,0,160 to 239,255,175), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1068 game time, 1068 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 93 total; [ItemEntity['item.item.seeds'/257, l='MpServer', x=298.72, y=62.00, z=85.75], ClientPlayerEntity['Player474'/330, l='MpServer', x=262.75, y=80.00, z=121.70], PigEntity['Pig'/258, l='MpServer', x=288.50, y=74.00, z=125.50], PigEntity['Pig'/259, l='MpServer', x=297.00, y=63.00, z=137.06], PigEntity['Pig'/260, l='MpServer', x=293.84, y=63.00, z=134.34], SkeletonEntity['Skeleton'/261, l='MpServer', x=300.50, y=32.00, z=173.50], ZombieEntity['Zombie'/262, l='MpServer', x=306.79, y=42.00, z=192.69], BatEntity['Bat'/263, l='MpServer', x=308.17, y=44.44, z=196.61], BatEntity['Bat'/266, l='MpServer', x=317.10, y=42.00, z=65.19], BatEntity['Bat'/267, l='MpServer', x=320.68, y=39.03, z=71.14], BatEntity['Bat'/268, l='MpServer', x=297.02, y=35.55, z=88.38], ZombieEntity['Zombie'/269, l='MpServer', x=318.03, y=47.00, z=141.53], CreeperEntity['Creeper'/270, l='MpServer', x=310.19, y=12.00, z=151.56], CreeperEntity['Creeper'/271, l='MpServer', x=309.28, y=12.00, z=151.53], ZombieEntity['Zombie'/143, l='MpServer', x=188.53, y=32.00, z=62.50], CreeperEntity['Creeper'/272, l='MpServer', x=318.38, y=11.00, z=151.97], SkeletonEntity['Skeleton'/144, l='MpServer', x=185.19, y=21.00, z=88.16], ZombieEntity['Zombie'/273, l='MpServer', x=316.50, y=28.00, z=181.50], SpiderEntity['Spider'/145, l='MpServer', x=186.69, y=21.00, z=90.94], SpiderEntity['Spider'/274, l='MpServer', x=313.50, y=42.00, z=191.50], SkeletonEntity['Skeleton'/146, l='MpServer', x=187.41, y=15.00, z=102.06], SkeletonEntity['Skeleton'/147, l='MpServer', x=191.50, y=20.00, z=103.50], ZombieEntity['Zombie'/278, l='MpServer', x=331.88, y=14.00, z=55.50], SpiderEntity['Spider'/279, l='MpServer', x=330.00, y=14.00, z=55.50], SpiderEntity['Spider'/153, l='MpServer', x=191.00, y=25.00, z=114.25], ZombieEntity['Zombie'/154, l='MpServer', x=191.97, y=23.00, z=117.56], CreeperEntity['Creeper'/283, l='MpServer', x=324.81, y=46.00, z=172.81], BatEntity['Bat'/284, l='MpServer', x=318.38, y=49.39, z=171.65], BatEntity['Bat'/285, l='MpServer', x=328.01, y=47.00, z=171.06], ZombieEntity['Zombie'/286, l='MpServer', x=322.50, y=46.00, z=186.50], PigEntity['Pig'/161, l='MpServer', x=202.84, y=64.00, z=47.69], CreeperEntity['Creeper'/162, l='MpServer', x=194.53, y=32.00, z=60.03], ZombieEntity['Zombie'/163, l='MpServer', x=196.52, y=32.00, z=58.00], ZombieEntity['Zombie'/164, l='MpServer', x=201.81, y=32.00, z=57.84], PigEntity['Pig'/165, l='MpServer', x=198.50, y=72.00, z=51.28], PigEntity['Pig'/166, l='MpServer', x=193.50, y=65.00, z=53.50], PigEntity['Pig'/167, l='MpServer', x=196.50, y=65.00, z=54.50], SkeletonEntity['Skeleton'/168, l='MpServer', x=200.70, y=19.00, z=99.97], SkeletonEntity['Skeleton'/169, l='MpServer', x=200.50, y=19.00, z=103.88], SkeletonEntity['Skeleton'/170, l='MpServer', x=201.91, y=17.00, z=105.41], SpiderEntity['Spider'/171, l='MpServer', x=202.13, y=19.00, z=115.99], ZombieEntity['Zombie'/172, l='MpServer', x=204.50, y=30.00, z=110.50], BatEntity['Bat'/173, l='MpServer', x=202.98, y=18.20, z=103.45], CreeperEntity['Creeper'/174, l='MpServer', x=197.97, y=13.00, z=126.59], SkeletonEntity['Skeleton'/175, l='MpServer', x=200.31, y=19.00, z=114.81], PigEntity['Pig'/176, l='MpServer', x=207.28, y=72.00, z=114.47], SkeletonEntity['Skeleton'/177, l='MpServer', x=198.81, y=24.00, z=195.38], WitchEntity['Witch'/178, l='MpServer', x=202.22, y=24.00, z=195.59], ChickenEntity['Chicken'/179, l='MpServer', x=199.28, y=66.00, z=198.50], ChickenEntity['Chicken'/180, l='MpServer', x=195.50, y=66.00, z=198.50], EndermanEntity['Enderman'/186, l='MpServer', x=217.66, y=45.00, z=56.72], SkeletonEntity['Skeleton'/187, l='MpServer', x=210.50, y=20.00, z=106.50], ZombieEntity['Zombie'/188, l='MpServer', x=220.50, y=47.00, z=103.50], ZombieEntity['Zombie'/189, l='MpServer', x=211.25, y=46.00, z=104.47], PigEntity['Pig'/190, l='MpServer', x=220.38, y=68.00, z=104.15], PigEntity['Pig'/191, l='MpServer', x=218.28, y=68.00, z=110.06], SpiderEntity['Spider'/192, l='MpServer', x=211.50, y=20.00, z=118.50], SkeletonEntity['Skeleton'/193, l='MpServer', x=209.50, y=20.00, z=114.50], PigEntity['Pig'/194, l='MpServer', x=201.44, y=72.00, z=124.41], BatEntity['Bat'/195, l='MpServer', x=214.34, y=32.19, z=180.46], BatEntity['Bat'/196, l='MpServer', x=215.69, y=31.07, z=181.82], SkeletonEntity['Skeleton'/199, l='MpServer', x=217.09, y=33.00, z=200.50], SkeletonEntity['Skeleton'/200, l='MpServer', x=214.44, y=33.00, z=198.25], ZombieEntity['Zombie'/208, l='MpServer', x=234.50, y=14.00, z=67.50], ZombieEntity['Zombie'/209, l='MpServer', x=234.06, y=23.00, z=97.56], BatEntity['Bat'/210, l='MpServer', x=235.26, y=22.75, z=106.71], EndermanEntity['Enderman'/211, l='MpServer', x=236.50, y=23.00, z=136.50], EndermanEntity['Enderman'/212, l='MpServer', x=238.50, y=23.00, z=138.50], SkeletonEntity['Skeleton'/213, l='MpServer', x=238.06, y=25.00, z=131.41], ZombieEntity['Zombie'/214, l='MpServer', x=236.56, y=39.00, z=129.97], CreeperEntity['Creeper'/215, l='MpServer', x=231.50, y=31.00, z=175.50], ZombieEntity['Zombie'/216, l='MpServer', x=224.44, y=32.00, z=184.03], CreeperEntity['Creeper'/217, l='MpServer', x=231.03, y=32.00, z=179.41], ItemEntity['item.item.seeds'/218, l='MpServer', x=238.53, y=63.00, z=184.88], PigEntity['Pig'/219, l='MpServer', x=235.06, y=64.00, z=191.97], PigEntity['Pig'/220, l='MpServer', x=237.78, y=63.00, z=197.88], PigEntity['Pig'/228, l='MpServer', x=255.50, y=66.00, z=106.50], PigEntity['Pig'/229, l='MpServer', x=255.53, y=64.00, z=104.84], PigEntity['Pig'/230, l='MpServer', x=254.53, y=64.00, z=106.06], PigEntity['Pig'/231, l='MpServer', x=252.94, y=64.00, z=107.13], ZombieEntity['Zombie'/232, l='MpServer', x=255.38, y=41.00, z=188.97], PigEntity['Pig'/233, l='MpServer', x=241.66, y=64.00, z=187.53], PigEntity['Pig'/234, l='MpServer', x=246.50, y=63.00, z=197.50], ZombieEntity['Zombie'/240, l='MpServer', x=256.38, y=38.00, z=55.00], ZombieEntity['Zombie'/241, l='MpServer', x=256.50, y=48.00, z=141.50], ZombieEntity['Zombie'/242, l='MpServer', x=260.50, y=40.00, z=192.50], ZombieEntity['Zombie'/243, l='MpServer', x=259.50, y=40.00, z=192.50], ZombieEntity['Zombie'/244, l='MpServer', x=261.50, y=40.00, z=192.50], PigEntity['Pig'/247, l='MpServer', x=276.50, y=69.00, z=48.69], CreeperEntity['Creeper'/248, l='MpServer', x=272.97, y=38.00, z=70.34], CreeperEntity['Creeper'/249, l='MpServer', x=277.28, y=38.15, z=68.24], SkeletonEntity['Skeleton'/250, l='MpServer', x=275.50, y=37.00, z=70.50], PigEntity['Pig'/251, l='MpServer', x=281.66, y=75.00, z=130.16]]
+	Retry entities: 0 total; []
+	Server brand: fabric
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.world.ClientWorld.addToCrashReport(ClientWorld.java:309)
+	at net.minecraft.client.MinecraftClient.addSystemDetailsToCrashReport(MinecraftClient.java:2311)
+	at net.minecraft.client.MinecraftClient.run(MinecraftClient.java:334)
+	at net.minecraft.client.main.Main.main(Main.java:124)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 22.0.2, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 150103040 bytes (143 MB) / 444596224 bytes (424 MB) up to 16072572928 bytes (15328 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 19, allocated: 12, tallocated: 94
+	Fabric Mods: 
+		fabricloader: Fabric Loader 0.15.11
+		java: OpenJDK 64-Bit Server VM 22
+		legacy-fabric-api: Legacy Fabric API 1.9.4+1.8.9
+		legacy-fabric-api-base: Legacy Fabric API Base 1.1.0+1.8.9+7c545fdbe239
+		legacy-fabric-api-base-common: Legacy Fabric API Base Common 1.1.0+7c545fdbe692
+		legacy-fabric-command-api-v1: Legacy Fabric Command API (V1) 1.0.0+7c545fdbdb92
+		legacy-fabric-command-api-v2: Legacy Fabric Command API (v2) 1.0.1+1.8.9+7c545fdb0039
+		legacy-fabric-crash-report-info-v1: Legacy Fabric Crash Report Info (v1) 1.0.0+7c545fdb4992
+		legacy-fabric-entity-events-v1: Legacy Fabric Entity Events (V1) 1.0.0+1.8.9+095a57590739
+		legacy-fabric-entity-events-v1-common: Legacy Fabric Entity Events (V1) 1.0.0+095a57593e92
+		legacy-fabric-gamerule-api-v1: Fabric Gamerule API (v1) 1.0.0+7c545fdb4c92
+		legacy-fabric-item-groups-v1: Legacy Fabric Item Groups (V1) 2.0.0+1.8.9+7c545fdbdb39
+		legacy-fabric-item-groups-v1-common: Legacy Fabric Item Groups (V1) 2.0.0+095a57594e92
+		legacy-fabric-keybinding-api-v1: Legacy Fabric Keybinding API (V1) 1.0.1+1.8.9+7c545fdb2839
+		legacy-fabric-keybinding-api-v1-common: Legacy Fabric Keybinding API (V1) 1.0.1+7c545fdb5992
+		legacy-fabric-lifecycle-events-v1: Legacy Fabric Lifecycle Events (V1) 1.0.1+1.8.9+095a5759f739
+		legacy-fabric-lifecycle-events-v1-common: Legacy Fabric Lifecycle Events (V1) 1.0.1+095a57597c92
+		legacy-fabric-logger-api-v1: Legacy Fabric Logger API (v1) 1.0.4+7c545fdb7292
+		legacy-fabric-networking-api-v1: Legacy Fabric Networking API (v1) 2.0.1+1.8.9+7c545fdb1839
+		legacy-fabric-networking-api-v1-common: Legacy Fabric Networking API (v1) 2.0.1+7c545fdb6192
+		legacy-fabric-permissions-api-v1: Legacy Fabric Permissions API (v2) 1.0.1+1.8.9+7c545fdb7839
+		legacy-fabric-permissions-api-v1-common: Legacy Fabric Permissions API (v1) 1.0.1+7c545fdba792
+		legacy-fabric-registry-sync-api-v1: Legacy Fabric Registry Sync API (V1) 2.2.0+1.8.9+7c545fdb6e39
+		legacy-fabric-registry-sync-api-v1-common: Legacy Fabric Registry Sync API (V1) 2.2.0+1c4806cdcb92
+		legacy-fabric-rendering-api-v1: Legacy Fabric Rendering API (V1) 1.0.0+1.8.9+7c545fdbba39
+		legacy-fabric-rendering-api-v1-common: Legacy Fabric Rendering API (V1) 1.0.0+7c545fdb6992
+		legacy-fabric-resource-loader-v1: Legacy Fabric Resource Loader (V1) 2.1.1+1.8.9+7c545fdb4d39
+		legacy-fabric-resource-loader-v1-common: Legacy Fabric Resource Loader (V1) Common 2.1.1+7c545fdbf192
+		megamaptracker: MegamapTracker 1.0
+		minecraft: Minecraft 1.8.9
+		mixinextras: MixinExtras 0.3.5
+	Launched Version: Fabric
+	LWJGL: 2.9.4+legacyfabric
+	OpenGL: NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 571.96, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 16x AMD Ryzen 7 5800H with Radeon Graphics 

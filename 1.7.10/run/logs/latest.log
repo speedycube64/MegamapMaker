@@ -1,0 +1,146 @@
+[21:23:59] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.7.10 with Fabric Loader 0.15.11
+[21:24:00] [main/INFO] (FabricLoader) Loading 31 mods:
+	- fabricloader 0.15.11
+	- java 22
+	- legacy-fabric-api 1.9.4+1.7.10
+	- legacy-fabric-api-base 1.1.0+1.7.10+7c545fdb5221
+	- legacy-fabric-api-base-common 1.1.0+7c545fdbe692
+	- legacy-fabric-command-api-v1 1.0.0+7c545fdbdb92
+	- legacy-fabric-command-api-v2 1.0.1+1.7.10+7c545fdbb521
+	- legacy-fabric-crash-report-info-v1 1.0.0+7c545fdb4992
+	- legacy-fabric-entity-events-v1 1.0.0+1.8.9+095a57590739
+	- legacy-fabric-entity-events-v1-common 1.0.0+095a57593e92
+	- legacy-fabric-gamerule-api-v1 1.0.0+7c545fdb4c92
+	- legacy-fabric-item-groups-v1 2.0.0+1.8.9+7c545fdbdb39
+	- legacy-fabric-item-groups-v1-common 2.0.0+095a57594e92
+	- legacy-fabric-keybinding-api-v1 1.0.1+1.7.10+7c545fdbfe21
+	- legacy-fabric-keybinding-api-v1-common 1.0.1+7c545fdb5992
+	- legacy-fabric-lifecycle-events-v1 1.0.1+1.7.10+095a57599921
+	- legacy-fabric-lifecycle-events-v1-common 1.0.1+095a57597c92
+	- legacy-fabric-logger-api-v1 1.0.4+7c545fdb7292
+	- legacy-fabric-networking-api-v1 2.0.1+1.7.10+7c545fdb9621
+	- legacy-fabric-networking-api-v1-common 2.0.1+7c545fdb6192
+	- legacy-fabric-permissions-api-v1 1.0.1+1.8.9+7c545fdb7839
+	- legacy-fabric-permissions-api-v1-common 1.0.1+7c545fdba792
+	- legacy-fabric-registry-sync-api-v1 2.2.0+1.7.10+7c545fdb5021
+	- legacy-fabric-registry-sync-api-v1-common 2.2.0+1c4806cdcb92
+	- legacy-fabric-rendering-api-v1 1.0.0+1.7.10+7c545fdb8221
+	- legacy-fabric-rendering-api-v1-common 1.0.0+7c545fdb6992
+	- legacy-fabric-resource-loader-v1 2.1.1+1.7.10+7c545fdbd621
+	- legacy-fabric-resource-loader-v1-common 2.1.1+7c545fdbf192
+	- megamaptracker 1.3
+	- minecraft 1.7.10
+	- mixinextras 0.3.5
+[21:24:00] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/C:/Users/rubik/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.3+mixin.0.8.5/9527e6b0d2449408958fd1302594dc65ec5ade9c/sponge-mixin-0.13.3+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[21:24:00] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[21:24:00] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/class_2533 (java.lang.ClassNotFoundException: net/minecraft/class_2533)
+[21:24:00] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.class_2533 was not found legacy-fabric-resource-loader-v1-common.mixins.json:client.ModelIdentifierMixin from mod legacy-fabric-resource-loader-v1-common
+[21:24:00] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/class_2598$1 (java.lang.ClassNotFoundException: net/minecraft/class_2598$1)
+[21:24:00] [main/WARN] (FabricLoader/Mixin) @Mixin target net/minecraft/class_2598$1 was not found legacy-fabric-permissions-api-v1.mixins.json:CommandStats_1Mixin from mod legacy-fabric-permissions-api-v1
+[21:24:00] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/class_2164$1 (java.lang.ClassNotFoundException: net/minecraft/class_2164$1)
+[21:24:00] [main/WARN] (FabricLoader/Mixin) @Mixin target net/minecraft/class_2164$1 was not found legacy-fabric-permissions-api-v1.mixins.json:ExecuteCommand_1Mixin from mod legacy-fabric-permissions-api-v1
+[21:24:00] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/class_224$1 (java.lang.ClassNotFoundException: net/minecraft/class_224$1)
+[21:24:00] [main/WARN] (FabricLoader/Mixin) @Mixin target net/minecraft/class_224$1 was not found legacy-fabric-permissions-api-v1.mixins.json:SignBlockEntity_1Mixin from mod legacy-fabric-permissions-api-v1
+[21:24:00] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/class_224$2 (java.lang.ClassNotFoundException: net/minecraft/class_224$2)
+[21:24:00] [main/WARN] (FabricLoader/Mixin) @Mixin target net/minecraft/class_224$2 was not found legacy-fabric-permissions-api-v1.mixins.json:SignBlockEntity_2Mixin from mod legacy-fabric-permissions-api-v1
+[21:24:00] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[21:24:01] [main/INFO] (Minecraft) Setting user: DevUser
+[21:24:01] [main/INFO] (Minecraft) (Session ID is token:devtoken:00000000-0000-0000-0000-000000000000)
+[21:24:02] [main/INFO] (Minecraft) LWJGL Version: 2.9.4+legacyfabric
+[21:24:02] [main/ERROR] (Minecraft) Couldn't initialize twitch stream
+[21:24:03] [main/INFO] (Minecraft) Reloading ResourceManager: Default, Legacy Fabric Crash Report Info (v1), Legacy Fabric API Base, MegamapTracker, Fabric Gamerule API (v1), Legacy Fabric Rendering API (V1), Legacy Fabric Networking API (v1), Legacy Fabric Registry Sync API (V1), Legacy Fabric Command API (v2), Legacy Fabric Resource Loader (V1), Legacy Fabric Registry Sync API (V1), Legacy Fabric Resource Loader (V1) Common, Legacy Fabric Rendering API (V1), Legacy Fabric Lifecycle Events (V1), Legacy Fabric API Base Common, Legacy Fabric Entity Events (V1), Legacy Fabric Permissions API (v2), Legacy Fabric Permissions API (v1), Legacy Fabric Keybinding API (V1), Legacy Fabric Networking API (v1), Legacy Fabric Command API (V1), Fabric Loader, Legacy Fabric Lifecycle Events (V1), Legacy Fabric Item Groups (V1), Legacy Fabric Item Groups (V1), Legacy Fabric Logger API (v1), Legacy Fabric Entity Events (V1)
+[21:24:03] [Sound Library Loader/INFO] (Minecraft) Sound engine started
+[21:24:03] [main/INFO] (Minecraft) Created: 512x256 textures/blocks-atlas
+[21:24:03] [main/INFO] (Minecraft) Created: 256x256 textures/items-atlas
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry legacy-fabric-registry-sync-api-v1-common:registry_remappers
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 7 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:blocks
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 171 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:status_effects
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 23 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:enchantments
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 24 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:items
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 315 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:biomes
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 60 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:block_entity_types
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 20 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:entity_types
+[21:24:13] [main/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 57 entries
+[21:24:13] [main/INFO] (LegacyFabricAPI/WorldSaveHandler) [legacy-fabric-registry-sync-api-v1] Loaded registry data [file 1/4]
+[21:24:13] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.7.10
+[21:24:13] [Server thread/INFO] (Minecraft) Generating keypair
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry legacy-fabric-registry-sync-api-v1-common:registry_remappers
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 7 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:blocks
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 171 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:status_effects
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 23 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:enchantments
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 24 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:items
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 315 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:biomes
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 60 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:block_entity_types
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 20 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:entity_types
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 57 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/WorldSaveHandler) [legacy-fabric-registry-sync-api-v1] Loaded registry data [file 1/4]
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry legacy-fabric-registry-sync-api-v1-common:registry_remappers
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 7 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:blocks
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 171 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:status_effects
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 23 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:enchantments
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 24 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:items
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 315 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:biomes
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 60 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:block_entity_types
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 20 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:entity_types
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 57 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/WorldSaveHandler) [legacy-fabric-registry-sync-api-v1] Loaded registry data [file 1/4]
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry legacy-fabric-registry-sync-api-v1-common:registry_remappers
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 7 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:blocks
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 171 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:status_effects
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 23 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:enchantments
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 24 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:items
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 315 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:biomes
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 60 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:block_entity_types
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 20 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapping registry minecraft:entity_types
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/RegistryRemapper) Remapped 57 entries
+[21:24:13] [Server thread/INFO] (LegacyFabricAPI/WorldSaveHandler) [legacy-fabric-registry-sync-api-v1] Loaded registry data [file 1/4]
+[21:24:13] [Server thread/INFO] (Minecraft) Preparing start region for level 0
+[21:24:14] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[21:24:14] [Server thread/INFO] (Minecraft) DevUser[local:E:55320611] logged in with entity id 394 at (214.62927361913052, 80.00133597911214, 225.7200292417778)
+[21:24:14] [Server thread/INFO] (Minecraft) DevUser joined the game
+[21:24:14] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[21:24:14] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/Overworld
+[21:24:14] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/Nether
+[21:24:14] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/The End
+[21:24:15] [Server thread/INFO] (Minecraft) DevUser has just earned the achievement [Taking Inventory]
+[21:24:15] [main/INFO] (Minecraft) [CHAT] DevUser has just earned the achievement [Taking Inventory]
+[21:24:29] [Server thread/WARN] (Minecraft) Can't keep up! Did the system time change, or is the server overloaded? Running 2139ms behind, skipping 42 tick(s)
+[21:24:35] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[21:24:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/Overworld
+[21:24:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/Nether
+[21:24:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/The End
+[21:24:35] [Server thread/INFO] (Minecraft) Stopping server
+[21:24:35] [Server thread/INFO] (Minecraft) Saving players
+[21:24:35] [Server thread/INFO] (Minecraft) Saving worlds
+[21:24:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/Overworld
+[21:24:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/Nether
+[21:24:35] [Server thread/INFO] (Minecraft) Saving chunks for level 'New World'/The End
+[21:24:36] [main/INFO] (Minecraft) Stopping!
