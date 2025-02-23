@@ -23,8 +23,9 @@ The script then reads this file and makes the video. The player head is kept in 
 ## Getting the Files
 To obtain the mod, download it from the Releases tab.
 
-To obtain the Python script and all needed assets, simply clone or download this repository.
-Note that this also includes a source code file I used to make the mod (`MegamapTracker.java`), but you don't need this file to run it.
+To obtain the Python script and all needed assets, clone or download the `python-script` branch of this repository.
+
+To obtain the mod's source code, clone or download the `mod` branch.
 
 ## Installing the Mod
 This mod uses the [Legacy Fabric](https://legacyfabric.net/downloads.html) modloader. It has been tested to work with OptiFine, SpeedrunIGT, and Custom Map Resetter.
@@ -62,8 +63,6 @@ Your minimaps will now be in the `videos` folder, and you can edit them over you
 First, the mod is only for 1.7.10 and 1.8.9, and I do not currently have plans to port it to other versions. Feel free to contact me if you would like this mod ported to a different version.
 
 ~~Since the mod was made with Mod Coder Pack, I won't be able to port it to versions above 1.12.2. I would have to rewrite it to use Fabric, which is not something I know how to do yet.~~
-
-If you're more experienced with modding and would like to port or change the mod yourself, I have provided the custom class `MegamapTracker.java` in the repository. Basically, you want to call the `fillUpBuffer` method every tick and call the `flushToDisk` method whenever the game is saved. I did the first one with a `ServerPlayerEntity` mixin and the second with a `SaveHandler` mixin.
 
 This system also doesn't show the locations of any non-player entities (most notably ender pearls). This is also a functionality I may implement in the future, though it would require drastic changes to both the mod and Python script.
 
