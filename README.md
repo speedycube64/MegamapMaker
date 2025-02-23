@@ -27,16 +27,7 @@ To obtain the Python script and all needed assets, simply clone or download this
 Note that this also includes a source code file I used to make the mod (`MegamapTracker.java`), but you don't need this file to run it.
 
 ## Installing the Mod
-This is a traditional JAR mod that doesn't use Forge, Fabric, or any other modloader.
-
-The best way to install this kind of mod is by using [MultiMC](https://multimc.org/):
-- Right click on the instance
-- Select "Edit Instance"
-- Go to the "Version" tab
-- Select "Add to Minecraft .jar"
-- Select the MegamapTracker jar file
-
-**Note: If you wish to also play with Legacy Fabric mods, make a brand new instance and install ALL desired mods before launching the instance for the first time.**
+This mod uses the [Legacy Fabric](https://legacyfabric.net/downloads.html) modloader. It has been tested to work with OptiFine, SpeedrunIGT, and Custom Map Resetter.
 
 ## Creating the Overhead Map Image
 This is done with [uNmINeD](https://unmined.net/downloads/):
@@ -68,11 +59,11 @@ After getting your run:
 Your minimaps will now be in the `videos` folder, and you can edit them over your run.
 
 ## Limitations and Possible Improvements
-First, the mod is only for 1.7.10. I will probably port it to 1.8 sometime in the future, but I do not have plans to port it to other versions. Feel free to contact me if you would like this mod ported to a different version, and I'll try my best to do so.
+First, the mod is only for 1.7.10 and 1.8.9, and I do not currently have plans to port it to other versions. Feel free to contact me if you would like this mod ported to a different version.
 
-Since the mod was made with Mod Coder Pack, I won't be able to port it to versions above 1.12.2. I would have to rewrite it to use Fabric, which is not something I know how to do yet.
+~~Since the mod was made with Mod Coder Pack, I won't be able to port it to versions above 1.12.2. I would have to rewrite it to use Fabric, which is not something I know how to do yet.~~
 
-If you're more experienced with modding and would like to port or change the mod yourself, I have provided the custom class `MegamapTracker.java` (I cannot provide _all_ the source code because some of it is Mojang's code, but this custom class is the bulk of it). Basically, you want to call the `fillUpBuffer` method every tick and call the `flushToDisk` method whenever the game is saved.
+If you're more experienced with modding and would like to port or change the mod yourself, I have provided the custom class `MegamapTracker.java` in the repository. Basically, you want to call the `fillUpBuffer` method every tick and call the `flushToDisk` method whenever the game is saved. I did the first one with a `ServerPlayerEntity` mixin and the second with a `SaveHandler` mixin.
 
 This system also doesn't show the locations of any non-player entities (most notably ender pearls). This is also a functionality I may implement in the future, though it would require drastic changes to both the mod and Python script.
 
