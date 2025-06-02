@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mod_id",
+  "version": "${version}",
+  "name": "mod_name",
+  "description": "mod_description",
+  "authors": [
+    "speedycube64"
+  ],
+  "contact": {
+    "homepage": "https://youtube.com/@speedycube64",
+    "sources": "https://github.com/speedycube64"
+  },
+  "license": "MPL-2.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "speedy.megamaptracker.MegamapEntry"
+    ]
+  },
+  "mixins": [
+    "mixins.json"
+  ],
+  "depends": {
+    "minecraft": "*",
+    "fabricloader": ">=0.15.0"
+  }
+}

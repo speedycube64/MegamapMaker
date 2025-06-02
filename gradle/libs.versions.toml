@@ -1,0 +1,20 @@
+[versions]
+# Remember to uncomment that one line in build.gradle if working with 1.7
+minecraft = "1.8.9"
+# Find yarn build here https://repo.legacyfabric.net/legacyfabric/net/legacyfabric/yarn/
+yarn_build = "535"
+fabric_loader = "0.16.10"
+loom = "1.10-SNAPSHOT"
+legacy-looming = "1.10-SNAPSHOT"
+
+# After changing versions, run:
+# ./gradlew clean
+# ./gradlew runClient --refresh-dependencies
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
+
+[plugins]
+fabric_loom = { id = "fabric-loom", version.ref = "loom" }
+legacy_looming = { id = "legacy-looming", version.ref = "legacy-looming" }
