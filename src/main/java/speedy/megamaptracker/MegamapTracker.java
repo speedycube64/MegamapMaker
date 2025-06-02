@@ -48,7 +48,7 @@ public class MegamapTracker
         times[tag] = System.currentTimeMillis();
         xPositions[tag] = player.x;
         zPositions[tag] = player.z;
-        dimensions[tag] = player.world.dimension.getType();
+        dimensions[tag] = player.world.dimension.dimensionType;
         rotations[tag] = player.yaw % 360;
 
         tag++;

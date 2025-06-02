@@ -30,7 +30,7 @@ loom {
     // }
 
     // uncomment for 1.7
-    // runs.client.programArgs "--userProperties", "{}"
+    runs.client.programArgs "--userProperties", "{}"
 }
 
 dependencies {
