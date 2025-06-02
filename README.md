@@ -25,8 +25,6 @@ To obtain the mod, download it from the Releases tab.
 
 To obtain the Python script and all needed assets, clone or download the `python-script` branch of this repository.
 
-To obtain the mod's source code, clone or download the `mod` branch.
-
 ## Installing the Mod
 This mod uses the [Legacy Fabric](https://legacyfabric.net/downloads.html) modloader. It has been tested to work with OptiFine, SpeedrunIGT, and Custom Map Resetter.
 
