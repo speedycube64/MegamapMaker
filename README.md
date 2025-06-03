@@ -58,9 +58,7 @@ After getting your run:
 Your minimaps will now be in the `videos` folder, and you can edit them over your run.
 
 ## Limitations and Possible Improvements
-First, the mod is only for 1.7.10 and 1.8.9, and I do not currently have plans to port it to other versions. Feel free to contact me if you would like this mod ported to a different version.
-
-~~Since the mod was made with Mod Coder Pack, I won't be able to port it to versions above 1.12.2. I would have to rewrite it to use Fabric, which is not something I know how to do yet.~~
+First, the mod is only for a small handful of versions. Feel free to contact me if you would like this mod ported to a different version than what is currently available.
 
 This system also doesn't show the locations of any non-player entities (most notably ender pearls). This is also a functionality I may implement in the future, though it would require drastic changes to both the mod and Python script.
 
@@ -69,4 +67,4 @@ Similarly, the map display is not dynamic. This means any blocks you place or br
 Lastly, the implementation is not very efficient. That's why it's called "MegamapMaker" and not "MinimapMaker".
 
 ## Credits
-Thanks to [jr5000](https://www.youtube.com/@jr5000pwp) for helping me learn how to use Mod Coder Pack and for suggesting that I use a custom class to make the mod. Also, thanks to [RedPenGuin111](https://www.youtube.com/@redpenguin111), whose Mapwreck 5 speedrun inspired me to make this.
+Thanks to [jr5000](https://www.youtube.com/@jr5000pwp) for helping me learn how to use Mod Coder Pack and [tildejustin](https://github.com/tildejustin/) for helping me with Legacy Fabric modding. Also, thanks to [RedPenGuin111](https://www.youtube.com/@redpenguin111), whose Mapwreck 5 speedrun inspired me to make this.
