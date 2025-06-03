@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "mod_id",
+  "id": "megamaptracker",
   "version": "${version}",
-  "name": "mod_name",
-  "description": "mod_description",
+  "name": "Megamap Tracker",
+  "description": "Puts player data into a file so that it can be processed into a minimap",
   "authors": [
     "speedycube64"
   ],
   "contact": {
     "homepage": "https://youtube.com/@speedycube64",
-    "sources": "https://github.com/speedycube64"
+    "sources": "https://github.com/speedycube64/MegamapMaker"
   },
   "license": "MPL-2.0",
   "environment": "*",
