@@ -1,8 +1,7 @@
 package speedy.megamaptracker.mixin;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.world.World;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.WorldSavePath;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,21 +11,20 @@ import speedy.megamaptracker.MegamapTracker;
 
 
 @Mixin(ServerPlayerEntity.class)
-public abstract class ServerPlayerEntityMixin extends LivingEntity {
-
-    public ServerPlayerEntityMixin(World world) {
-        super(world);
-    }
-
-    ServerPlayerEntity _this = (ServerPlayerEntity) (Object) (this);
-
-    String saveFolder = this.world.getSaveHandler().getWorldFolder().toString();
+public abstract class ServerPlayerEntityMixin{
 
     private static final Logger LOGGER = LogManager.getLogger("MegamapTracker");
 
-    @Inject(method = "tick", at = @At("TAIL"))
-    private void getPositionEveryTick(CallbackInfo ci) {
+    @Inject(method = "<init>", at = @At("TAIL"))
+    private void setupTracker(CallbackInfo ci){
+        ServerPlayerEntity _this = (ServerPlayerEntity) (Object) (this);
+        String saveFolder = _this.world.getServer().getSavePath(WorldSavePath.ROOT).toString();
+        MegamapTracker.setSaveFolder(saveFolder);
+    }
 
-        MegamapTracker.fillUpBuffer(saveFolder, _this);
+    @Inject(method = "tick", at = @At("TAIL"))
+    private void savePositionEveryTick(CallbackInfo ci) {
+        ServerPlayerEntity _this = (ServerPlayerEntity) (Object) (this);
+        MegamapTracker.fillUpBuffer(_this);
     }
 }

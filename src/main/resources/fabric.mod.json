@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "mod_id",
+  "id": "megamaptracker",
   "version": "${version}",
-  "name": "mod_name",
-  "description": "mod_description",
+  "name": "Megamap Tracker",
+  "description": "Writes player data to a file so that it can be processed into a minimap",
   "authors": [
     "speedycube64"
   ],

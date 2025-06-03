@@ -1,6 +1,5 @@
 plugins {
     alias libs.plugins.fabric.loom
-    alias libs.plugins.legacy.looming
     id "maven-publish"
 }
 
@@ -12,7 +11,7 @@ base {
 }
 
 repositories {
-    // maven { url "https://jitpack.io" }
+    maven { url "https://jitpack.io" }
     // flatDir { dirs "libs" }
 }
 
@@ -25,21 +24,12 @@ loom {
     mixin {
         useLegacyMixinAp = false
     }
-    // legacyLooming {
-    //     intermediaryVersion = 1
-    // }
-
-    // uncomment for 1.7
-    // runs.client.programArgs "--userProperties", "{}"
 }
 
 dependencies {
     minecraft libs.minecraft
-    mappings legacy.yarn(libs.versions.minecraft.get(), libs.versions.yarn.build.get())
+    mappings variantOf(libs.yarn.mappings) { classifier "v2" }
     modImplementation libs.fabric.loader
-
-    // add another mod's packages through modrinth like this:
-    // modImplementation "maven.modrinth:speedrunigt:14.2+1.8.9"
 }
 
 processResources {

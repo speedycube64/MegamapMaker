@@ -3,6 +3,7 @@ package speedy.megamaptracker;
 import java.io.*;
 
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.world.dimension.DimensionType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,6 +33,7 @@ public class MegamapTracker
     private static int tag = 0;
 
     private static PrintWriter printWriter;
+    private static String saveFolder;
 
     public MegamapTracker()
     {
@@ -42,13 +44,13 @@ public class MegamapTracker
         times = new long[BUFFER_SIZE + 1];
     }
 
-    public static void fillUpBuffer(String saveFolder, PlayerEntity player)
+    public static void fillUpBuffer(PlayerEntity player)
     {
         //save player data to the arrays
         times[tag] = System.currentTimeMillis();
-        xPositions[tag] = player.x;
-        zPositions[tag] = player.z;
-        dimensions[tag] = player.world.dimension.getType();
+        xPositions[tag] = player.getX();
+        zPositions[tag] = player.getZ();
+        dimensions[tag] = tracker.legacyDimensionType(player.world.getDimension());
         rotations[tag] = player.yaw % 360;
 
         tag++;
@@ -56,16 +58,15 @@ public class MegamapTracker
         //if the arrays are full, save the data and reset the buffers
         if(tag >= BUFFER_SIZE)
         {
-            flushToDisk(saveFolder);
+            flushToDisk();
         }
     }
 
-    public static void flushToDisk(String saveFolder)
+    public static void flushToDisk()
     {
         try
         {
-            //make/open the file in the current save folder
-//                String saveDirectory = "saves/" + saveFolder + "/";
+
             String saveDirectory = saveFolder + "/";
             new File(saveDirectory).mkdirs();
             String filePath = saveDirectory + "map_log.txt";
@@ -107,7 +108,17 @@ public class MegamapTracker
             tag = 0;
         }
 
-
     }
 
+    public static void setSaveFolder(String saveFolder) {
+        MegamapTracker.saveFolder = saveFolder;
+    }
+
+    private int legacyDimensionType(DimensionType dim)
+    {
+        // idk shit about registries dog :sob:
+        if (dim.hasCeiling()) return -1;
+        else if (dim.hasEnderDragonFight()) return 1;
+        else return 0;
+    }
 }
